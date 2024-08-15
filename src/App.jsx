@@ -35,7 +35,7 @@ function App() {
       <div className="App font-notosans">
           <div className={"flex-row justify-center text-center"}>
           </div>
-          <VerifyUserWithMobileNo liff_id_token={idToken} line_context={lineContext}/>
+          <VerifyUserWithMobileNo liff_id_token={idToken} line_context={lineContext} liff={liff}/>
       </div>
       </QueryClientProvider>
   );

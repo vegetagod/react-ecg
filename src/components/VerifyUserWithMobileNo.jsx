@@ -5,8 +5,7 @@ import {useForm} from "react-hook-form";
 import axios from "axios";
 
 export default function VerifyUserWithMobileNo(props){
-
-    const {liff_id_token, line_context} = props
+    const {liff_id_token, line_context, liff} = props
 
     const[contentModal, setContentModal] = useState(<div/>)
     const openLineOfficial =()=>{
@@ -65,7 +64,7 @@ export default function VerifyUserWithMobileNo(props){
         // alert(JSON.stringify(request))
 
         try{
-            const response = await fetch("https://3634-124-120-204-90.ngrok-free.app/check_line_ref_id", {
+            const response = await fetch("https://17c4-124-120-204-90.ngrok-free.app/check_line_ref_id", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -100,7 +99,7 @@ export default function VerifyUserWithMobileNo(props){
 
     return (
         <div className={"flex-row justify-center text-center min-h-screen"}>
-            <ConfirmModal>
+            <ConfirmModal liff={liff}>
                 {contentModal}
             </ConfirmModal>
             <div className={"pt-10 flex-row"}>
